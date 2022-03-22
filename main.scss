@@ -1,0 +1,245 @@
+body {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "Source Sans Pro", sans-serif;
+    background-color: white;
+}
+
+
+.grid-c {
+    column-gap: 5px;
+    row-gap: 5px;
+
+    .grid-header {
+        grid-area: header;
+        color: #afb4b8;
+
+        img {
+            vertical-align: text-bottom;
+        }
+
+        a:link {
+            color: #afb8c0;
+            background-color: transparent;
+            text-decoration: underline;
+            vertical-align: text-top;
+        }
+
+        a:hover, a:active, a:visited {
+            color: #afb4b8;
+            background-color: transparent;
+            text-decoration: none;
+        }
+
+        a:last-child {
+            text-decoration: none;
+        }
+    }
+
+    .flex-main-top {
+        border: 1px solid #dfe9f5;
+        background-color: #d5eaf8;
+        padding-top: 10px;
+        padding-bottom: 10px;
+
+        > div:nth-child(1) {
+            text-align: left;
+            height: max-content;
+            border-right: 1px solid #c5d3de;
+            padding-left: 5px;
+            font-size: 12px;
+            font-weight: 700;
+            color: #a8aeb3;
+
+            input {
+                vertical-align: text-bottom;
+                margin-left: 5px;
+                width: 15px;
+                height: 15px;
+            }
+        }
+
+        > div:nth-child(2) {
+            text-align: center;
+            height: max-content;
+            border-right: 1px solid #c5d3de;
+            font-size: 12px;
+            font-weight: 700;
+            color: #a8aeb3;
+
+            input {
+                vertical-align: text-bottom;
+                margin-left: 5px;
+                height: 14px;
+                width: 14px;
+            }
+        }
+
+        > div:last-child {
+            text-align: right;
+            font-size: 12px;
+            font-weight: 700;
+            color: #a8aeb3;
+
+            > div > div:nth-child(2) {
+                margin-left: 5px;
+                max-width: 32px;
+                color: #f9585a;
+                border-bottom: 1px dashed;
+            }
+
+            > div > div:last-child {
+                max-width: 15px;
+            }
+
+            img {
+                width: 100%;
+            }
+        }
+
+        input[type="checkbox"] {
+            /*how to change color inside checkbox????*/
+            background-color: red;/*xd*/
+        }
+    }
+    
+    .flex-main-body {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        > div {
+            width: 160px;
+            text-align: center;
+            border: 1px solid #d0dbe6;
+            border-radius: 8px;
+            padding-top: 10px;
+        }
+
+        > div .title {
+            color: #58b8dc;
+            font-weight: 600;
+            font-size: 15px;
+            text-decoration: underline;
+            margin-bottom: 10px;
+            height: 44px;
+        }
+
+        > div .description {
+            color: #a1a1a1;
+            font-weight: 600;
+            font-size: 15px;
+            margin-bottom: 10px;
+            height: 66px;
+        }
+        .price div:first-child {
+            font-weight: 700;
+            font-size: 20px;
+        }
+        .price div:last-child {
+            color: #a1a1a1;
+            font-weight: 600;
+            font-size: 15px;
+            height: max-content;
+        }
+        
+        .previous-price {
+            width: max-content;
+            height: max-content;
+            color: lightslategray;
+            font-weight: 600;
+            font-size: 20px;
+        }
+        > div > div img {
+            position: absolute;
+            z-index: 2;
+            margin-top: 9px;
+        }
+        .count {
+            margin-bottom: 10px;
+            width: 125px;
+            border-radius: 20px;
+            background-color: #eef8ff;
+        }
+        .count div:first-child {
+            border: 1px solid #cfd1d2;
+            border-radius: 20px;
+            padding: 5px;
+            vertical-align: middle;
+            margin-right: 2px;
+            min-width: 63px;
+        }
+        .count div:last-child {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #f73d3c;
+            margin-left: 2px;
+            svg {
+                padding-top: 8px;
+                color: white;
+            }
+        }
+    }
+
+    .flex-main-footer {
+        border: 1px solid #e5f0fb;
+        background-color: #eef8ff;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        border-radius: 8px;
+        div > div {
+            color: #a1a1a1;
+            font-weight: 700;
+            font-size: 20px;
+            margin-left: 5px;
+            margin-right: 5px;
+            a:link {
+                text-decoration: underline;
+                color: lightgrey;
+                font-weight: 600;
+                font-size: 15px;
+            }
+            a:hover, a:active, a:visited {
+                text-decoration: none;
+                color: #a1a1a1;
+                font-weight: 600;
+                font-size: 15px;
+            }
+        }
+    }
+
+    .uparrow{
+        font-size: 13px;
+        color: red;    
+    }
+
+    .downarrow{
+        font-size: 13px;
+        color: lightgray;
+    }
+
+    .grid {
+        display: grid;
+        border: 1px solid rgb(53, 148, 192);
+    }    
+
+    .grid-part1 {
+        grid-area: part1;
+        font-size: 35px;
+        font-weight: 700;
+    }
+    
+    .grid-part2 {
+        grid-area: part2;
+    }
+
+    .grid-part3 {
+        grid-area: part3;
+    }
+
+    .grid-footer {
+        grid-area: footer;
+    }
+
+    grid-template-areas: "header" "part1" "part2" "part3" "footer";
+}
